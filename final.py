@@ -60,7 +60,7 @@ def setup_plot(fig, a, b, c, ax_x, ax_y, ax_traj):
     y_grid=np.concatenate([y_grid, y2_grid])
 
     # Vẽ line y(x) analytic
-    line_analytic, = ax_traj.plot(x_grid, y_grid, 'r--', lw=1.8, label="(x;y(x)) trail")
+    #line_analytic, = ax_traj.plot(x_grid, y_grid, 'r--', lw=1.8, label="(x;y(x)) trail")
 
     ax_traj.legend()
 
@@ -76,7 +76,7 @@ def setup_plot(fig, a, b, c, ax_x, ax_y, ax_traj):
         "line_x": line_x,
         "line_y": line_y,
         "line_xy": line_xy,
-        "line_analytic": line_analytic,
+        #"line_analytic": line_analytic,
         "point_xy": point_xy,
 
         "ax_x": ax_x,
@@ -147,7 +147,7 @@ class MainWindow(QWidget):
 
         self.slider = QSlider(Qt.Horizontal)
         self.slider.setRange(0, 1000)
-        self.slider.valueChanged.connect(self.slider_changed)
+        #self.slider.valueChanged.connect(self.slider_changed)
         self.slider.setEnabled(False)
         layout.addWidget(self.slider)
 
@@ -181,7 +181,7 @@ class MainWindow(QWidget):
 
         self.t_val = self.state["t_min"]
         self.slider.setValue(0)
-        self.slider.setEnabled(True)
+        #self.slider.setEnabled(True)
         self.btn_anim.setEnabled(True)
         self.canvas.draw_idle()
 
